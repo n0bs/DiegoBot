@@ -1,0 +1,10 @@
+services:
+  DiegoBot:
+    image: docker.io/n0bs/DiegoBot:latest
+    container_name: DiegoBot
+    network_mode: host
+    environment:
+      - TOKEN= #Discord bot auth token
+    volumes:
+      - /path/to/csv:/config
+    restart: unless-stopped
